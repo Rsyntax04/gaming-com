@@ -1,0 +1,291 @@
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.logo{
+  margin-top: 1.7%;
+}
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  height: 100px;
+  z-index: 1;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  align-items: center;
+  font-weight: bolder;
+  margin-top: 13px;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: lightgray;
+}
+
+/* Threebars Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+  /* Threebars Menu Animation */
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+
+  .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px , 0);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+.container-produk {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    flex-direction: column;
+    line-break: 100px;
+}
+
+.produk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    width: 80%;
+    height: 600px;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.nama-produk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nama-produk p {
+    line-height: 35px;
+}
+
+.gambar-produk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.legion5 {
+    margin-right: -5%;
+    width: 46%;
+}
+
+.rog {
+    margin-right: -7%;
+    width: 45%;
+}
+
+.omen {
+    margin-right: -10%;
+    margin-top: 5%;
+    width: 55%;
+}
+
+.keyboard1 {
+  width: 45%;
+  margin-right: -5%;
+}
+
+.keyboard2 {
+  width: 40%;
+  margin-right: -5%;
+}
+
+.mouse1 {
+  width: 40%;
+  margin-right: -5%;
+}
+
+.mouse2 {
+  width: 55%;
+  margin-right: -14%;
+}
+
+.headset1 {
+  width: 55%;
+  margin-right: -10%;
+  margin-bottom: 7%;
+}
+
+.headset2 {
+  width: 45%;
+  margin-right: -5%;
+}
+
+.deskmat1 {
+  width: 40%;
+  margin-right: -5%;
+}
+
+.deskmat2 {
+  width: 40%;
+  margin-right: -5%;
+}
+
+/* Responsive */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 60%;
+  }
+}
+
+/* Ukuran Handphone */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: black;
+    justify-content: space-evenly;
+    z-index: 1;
+    transition: all 0.5s;
+    opacity: 1;
+  }
+
+  nav ul.slide {
+    transition:0.5s;
+    opacity: 0; 
+  }
+}
+#carouselExampleControls{
+  width: 100%;
+  padding-top:7.8%;
+}
+#catalouge{
+  margin-top: 15%;
+ padding-bottom: 13%;
+}
+#hover{
+  transition: .5s;
+  width:25%;
+  font-size: 120%;
+}
+#hover:hover{
+  transition: ease-in-out .5s;
+  transform: scale(120%);
+}
+#hover1{
+  transition: .5s;
+  width: 25%;
+  font-size: 120%;
+}
+#hover1:hover{
+  transition: ease-in-out .5s;
+  transform: scale(120%);
+}
+@media screen and (max-width:576px) {
+  #hover1{
+    width: 45%;
+    font-size: 70%;
+  }
+  #hover{
+    width: 45%;
+    font-size: 70%;
+  }
+  #catalouge{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+.list{
+  list-style: none;
+}
+.discover{
+  text-align: center;
+  list-style: none;
+}
+.produk-5 {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;  
+  width: 80%;               
+  height: 600px;
+  background-color: lightgray;    
+                  
+}
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  flex-direction: column;
+  line-break: 100px;
+}
+
+.gambar-carousel{
+  height: 100vh;
+}
